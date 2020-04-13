@@ -18,6 +18,12 @@ class Vector:
     def __rmul__(self, k):
         return self * k
 
+    def __pos__(self):
+        return 1 * self
+
+    def __neg__(self):
+        return -1 * self
+
     def __iter__(self):
         # 返回向量的迭代器
         return self._values.__iter__()
