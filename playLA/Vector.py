@@ -2,6 +2,15 @@ class Vector:
     def __init__(self, lst):
         self._values = lst
 
+    def __add__(self, other):
+        assert len(self) == len(other), \
+            "两个向量的维度不相等."
+        return Vector([a + b for a, b in zip(self, other)])
+
+    def __iter__(self):
+        # 返回向量的迭代器
+        return self._values.__iter__()
+
     def __repr__(self):
         return "Vector({})".format(self._values)
 

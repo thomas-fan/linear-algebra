@@ -4,3 +4,6 @@ if __name__ == "__main__":
     vec = Vector([5, 2])
     print(vec)
     print("vec[0]={},vec[1]={}".format(vec[0], vec[1]))
+
+    vec2 = Vector([3, 1])
+    print("{} + {} = {}".format(vec, vec2, vec + vec2))
